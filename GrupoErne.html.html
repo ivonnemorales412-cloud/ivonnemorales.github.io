@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frutas y Verduras "Grupo Erne"</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f5f5f5; }
+    .menu-fijo {
+      position: fixed; top: 0; width: 100%; background: #2e7d32;
+      color: white; padding: 15px 20px; display: flex;
+      justify-content: space-between; align-items: center; z-index: 1000;
+      flex-wrap: wrap;
+    }
+    .nombre-negocio { font-size: 1.5em; font-weight: bold; }
+    .enlaces-menu a { 
+      color: white; text-decoration: none; margin-left: 20px; 
+      padding: 5px 10px; border-radius: 5px; display: inline-block;
+    }
+    .enlaces-menu a:hover { background: #1b5e20; }
+    main { margin-top: 80px; }
+    .contenedor { 
+      max-width: 1200px; margin: 20px auto; padding: 20px; 
+      background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .btn-comprar, .btn-whatsapp, .btn-descargar {
+      display: inline-block; background: #25d366; color: white;
+      padding: 12px 24px; text-decoration: none; border-radius: 5px; 
+      margin-top: 10px; border: none; cursor: pointer;
+    }
+    .btn-comprar:hover, .btn-whatsapp:hover, .btn-descargar:hover { background: #128c7e; }
+    .contenedor-mapa iframe { width: 100%; height: 400px; border: 0; border-radius: 10px; }
+    .dato-destacado { font-size: 1.2em; font-weight: bold; color: #2e7d32; margin: 10px 0; }
+    .bloque-datos { background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0; }
+    .seccion-cotizacion { margin-top: 30px; padding: 20px; background: #fff3e0; border-radius: 10px; }
+    .bloque-cotizacion-flex { 
+      display: flex; gap: 30px; flex-wrap: wrap; 
+      justify-content: center; margin: 20px 0; 
+    }
+    .columna-precio, .columna-qr { 
+      flex: 1; min-width: 280px; text-align: center; 
+    }
+    .img-cotizacion { 
+      max-width: 100%; height: auto; border-radius: 10px; 
+      cursor: pointer; transition: transform 0.3s;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      max-height: 400px;
+      object-fit: contain;
+    }
+    .img-cotizacion:hover { transform: scale(1.02); }
+    .img-qr { 
+      width: 220px; height: auto; border-radius: 10px; 
+      background: white; padding: 10px;
+    }
+    .tarjeta-qr { 
+      background: white; padding: 20px; border-radius: 10px; 
+      display: inline-block; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .texto-qr { margin-top: 10px; font-size: 0.9em; }
+    .contenedor-descarga-btn { text-align: center; margin-top: 20px; }
+    .nota-cotizacion { font-size: 0.85em; color: #666; margin-top: 10px; }
+    footer { background: #2e7d32; color: white; text-align: center; padding: 20px; margin-top: 30px; }
+    
+    @media (max-width: 768px) {
+      .menu-fijo { flex-direction: column; gap: 10px; text-align: center; }
+      .enlaces-menu a { margin: 0 10px; }
+      main { margin-top: 120px; }
+      .bloque-cotizacion-flex { flex-direction: column; }
+      .img-cotizacion { max-height: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="menu-fijo">
+    <span class="nombre-negocio">🌱 Grupo Erne</span>
+    <div class="enlaces-menu">
+      <a href="#productos">🍎 Productos</a>
+      <a href="#ubicacion">📍 Ubicación</a>
+      <a href="#contacto">📞 Contacto</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="productos" class="contenedor">
+      <img src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?w=600&auto=format" alt="Frutas" style="width:100%; max-width:400px; border-radius:10px;">
+      <h2>Canasta de Temporada</h2>
+      <p>Frutas y verduras 100% orgánicas.</p>
+      <a href="https://wa.me/525569681690?text=Hola!%20Me%20interesa%20comprar%20la%20Canasta%20de%20Temporada" target="_blank" class="btn-comprar">🛒 Comprar ahora</a>
+    </section>
+
+    <section id="ubicacion" class="contenedor">
+      <h2>🏪 Conoce Nuestra Tienda "Frutería y Abarrotes Raquel"</h2>
+      <p>Visítanos y elige los productos más frescos directamente de los estantes.</p>
+      <p class="dato-destacado">📍 Ignacio Mariscal No.66</p>
+      <p>Horario: Lunes a Sábado de 7:00 AM a 9:00 PM | Domingos de 7:00 AM a 7:00 PM</p>
+      <div class="contenedor-mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.5!2d-99.1518364!3d19.4373884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8d3ee1e66db%3A0x6ff8fe0ecdaf142!2sFruter%C3%ADa%20y%20Abarrotes%20Raquel!5e0!3m2!1ses!2smx!4v1700000000000" allowfullscreen=""></iframe>
+      </div>
+    </section>
+
+    <section id="contacto" class="contenedor">
+      <h2>📞 Haz tu Pedido y Cotiza Precios</h2>
+      
+      <p>¿No quieres salir de casa? Te lo llevamos hasta tu puerta de forma segura.</p>
+      <p class="texto-mayoreo" style="background:#e8f5e9; padding:10px; border-radius:10px;">🍇 Atendemos pedidos de gran volumen para <strong>restaurantes, cafeterías, hoteles, etc.</strong> ¡Te damos un excelente precio y lo cotizamos a tu medida!</p>
+      
+      <div class="bloque-datos">
+        <p class="dato-destacado">📞 Teléfono: 55-6968-1690</p>
+        <p class="dato-destacado">💬 WhatsApp: +52 55-6968-1690</p>
+        <p class="dato-destacado">✉️ Correo: gpoerne@gmail.com</p>
+      </div>
+      
+      <a href="https://wa.me/525569681690?text=Hola!%20Me%20gustaría%20solicitar%20una%20cotización%20de%20precios%20para%20un%20pedido" target="_blank" class="btn-whatsapp">💬 Cotizar por WhatsApp</a>
+
+      <!-- SECCIÓN CON TU QR Y COTIZACIÓN -->
+      <div class="seccion-cotizacion">
+        <h3>📋 Lista de Precios del Mes</h3>
+        
+        <div class="bloque-cotizacion-flex">
+          <!-- Columna izquierda: Tu cotización -->
+          <div class="columna-precio">
+            <a href="images/cotizacion-mes.jpg" target="_blank" title="Ver en pantalla completa">
+              <img src="images/cotizacion-mes.jpg" alt="Cotización y precios del mes" class="img-cotizacion">
+            </a>
+            <p class="nota-cotizacion">💡 Haz clic en la imagen para verla en pantalla completa y hacer zoom.</p>
+          </div>
+
+          <!-- Columna derecha: Tu código QR -->
+          <div class="columna-qr">
+            <div class="tarjeta-qr">
+              <img src="images/qr-cotizacion.png" alt="Código QR para descargar cotización" class="img-qr">
+              <p class="texto-qr"><strong>¡Escanea y llévatelo!</strong><br>Accede de inmediato a la lista desde tu celular.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-descarga-btn">
+          <a href="images/cotizacion-mes.jpg" download="Lista_Precios_Grupo_Erne.jpg" class="btn-descargar">
+            📥 Descargar Lista de Precios
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Grupo Erne - Frutería y Abarrotes Raquel. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Verificar si las imágenes cargaron correctamente
+    document.querySelectorAll('img').forEach(img => {
+      img.onerror = function() {
+        console.log('Error cargando:', this.src);
+        this.alt = '⚠️ Imagen no encontrada: ' + this.src.split('/').pop();
+      };
+    });
+  </script>
+</body>
+</html>

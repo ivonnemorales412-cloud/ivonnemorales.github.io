@@ -1,0 +1,196 @@
+/* --- CONFIGURACIÓN GENERAL Y FUENTES --- */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  background-color: #fcfbf9; /* Un blanco roto/marfil muy elegante */
+  color: #2c3e35; /* Verde extremadamente oscuro para el texto, más suave que el negro puro */
+}
+
+body {
+  padding-top: 80px !important; 
+  margin: 0;
+}
+
+/* --- MENÚ DE NAVEGACIÓN ESTILO BOUTIQUE --- */
+.menu-fijo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.92); /* Fondo blanco traslúcido elegante */
+  backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado moderno */
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(44, 62, 53, 0.08); /* Línea divisoria minimalista */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  z-index: 1000;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.nombre-negocio {
+  color: #1b4332; /* Verde bosque profundo, transmite seriedad y calidad */
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.3px; /* Acercar un poco las letras da un look más de marca */
+}
+
+.enlaces-menu {
+  display: flex;
+  gap: 32px; /* Más espacio entre enlaces para que respire el diseño */
+}
+
+.menu-fijo a {
+  text-decoration: none;
+  color: #52635a; /* Gris verdoso sutil */
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase; /* Links en mayúsculas pequeñas se ven más sofisticados */
+  transition: color 0.25s ease;
+  position: relative;
+}
+
+/* Animación de línea elegante debajo de los links al pasar el mouse */
+.menu-fijo a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: #2d6a4f;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.menu-fijo a:hover {
+  color: #1b4332;
+}
+
+.menu-fijo a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+/* --- SECCIÓN DE PRODUCTOS Y BOTONES PRINCIPALES --- */
+.btn-comprar {
+  display: inline-block;
+  background-color: #1b4332; /* Cambiado de rojo chillón a un verde premium */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 50px; /* Bordes completamente redondeados estilo moderno */
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 14px rgba(27, 67, 50, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 15px;
+}
+
+.btn-comprar:hover {
+  background-color: #2d6a4f;
+  transform: translateY(-2px); /* Sube sutilmente */
+  box-shadow: 0 6px 20px rgba(27, 67, 50, 0.3);
+}
+
+.btn-comprar:active {
+  transform: translateY(0);
+}
+
+
+/* --- SECCIÓN DE COTIZACIONES Y MAYOREO (PREMIUM) --- */
+
+/* Bloque de texto enfocado en negocios */
+.texto-mayoreo {
+  background-color: #f2f7f4; /* Fondo menta/grisáceo ultra suave */
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #2d6a4f;
+  line-height: 1.6;
+  margin: 25px 0;
+  border-left: 4px solid #2d6a4f; /* Línea verde integrada a la paleta */
+  border-right: 1px solid rgba(45, 106, 79, 0.08);
+  border-top: 1px solid rgba(45, 106, 79, 0.08);
+  border-bottom: 1px solid rgba(45, 106, 79, 0.08);
+}
+
+/* Contenedor de la cotización mensual */
+.seccion-cotizacion {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #357a4c; /* Línea sólida y delgada en vez de discontinua */
+}
+
+.seccion-cotizacion h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1b4332;
+  margin-bottom: 20px;
+  letter-spacing: -0.2px;
+}
+
+/* Diseño para la imagen de la cotización */
+.contenedor .img-cotizacion {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  border: 1px solid #e3e9e5;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); /* Sombra difusa y muy suave */
+  margin-bottom: 8px;
+}
+
+.seccion-cotizacion a img.img-cotizacion {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+  cursor: zoom-in;
+}
+
+.seccion-cotizacion a:hover img.img-cotizacion {
+  transform: scale(1.015);
+  filter: brightness(0.98);
+}
+
+.nota-cotizacion {
+  font-size: 13px;
+  color: #718378;
+  font-style: normal; /* El itálico a veces se ve descuidado; un color gris medio es más limpio */
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Botón de descarga sofisticado */
+.btn-descargar {
+  display: inline-block;
+  background-color: transparent; 
+  color: #2d6a4f;
+  border: 1.5px solid #2d6a4f; /* Estilo 'outline' que denota elegancia secundaria */
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  margin-top: 20px;
+  transition: all 0.25s ease;
+  width: auto; /* Ya no abarca toda la tarjeta, se autocontiene de forma más limpia */
+  box-sizing: border-box;
+}
+
+.btn-descargar:hover {
+  background-color: #2d6a4f;
+  color: #ffffff;
+}
+
+.btn-descargar:active {
+  transform: scale(0.98);
+}
