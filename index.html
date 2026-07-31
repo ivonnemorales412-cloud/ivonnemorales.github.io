@@ -115,48 +115,44 @@
       <a href="https://wa.me/525569681690?text=Hola!%20Me%20gustaría%20solicitar%20una%20cotización%20de%20precios%20para%20un%20pedido" target="_blank" class="btn-whatsapp">💬 Cotizar por WhatsApp</a>
 
       <!-- SECCIÓN CON TU QR Y COTIZACIÓN -->
-      <div class="seccion-cotizacion">
-        <h3>📋 Lista de Precios del Mes</h3>
-        
-        <div class="bloque-cotizacion-flex">
-          <!-- Columna izquierda: Tu cotización -->
-          <div class="columna-precio">
-            <a href="images/cotizacion-mes.jpg" target="_blank" title="Ver en pantalla completa">
-              <img src="images/cotizacion-mes.jpg" alt="Cotización y precios del mes" class="img-cotizacion">
-            </a>
-            <p class="nota-cotizacion">💡 Haz clic en la imagen para verla en pantalla completa y hacer zoom.</p>
-          </div>
+<div class="seccion-cotizacion">
+  <h3>📋 Lista de Precios del Mes</h3>
 
-          <!-- Columna derecha: Tu código QR -->
-          <div class="columna-qr">
-            <div class="tarjeta-qr">
-              <img src="images/qr-cotizacion.png" alt="Código QR para descargar cotización" class="img-qr">
-              <p class="texto-qr"><strong>¡Escanea y llévatelo!</strong><br>Accede de inmediato a la lista desde tu celular.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="contenedor-descarga-btn">
-          <a href="images/cotizacion-mes.jpg" download="Lista_Precios_Grupo_Erne.jpg" class="btn-descargar">
-            📥 Descargar Lista de Precios
-          </a>
-        </div>
+  <div class="bloque-cotizacion-flex">
+    <!-- Columna izquierda: Galería de la cotización (3 páginas) -->
+    <div class="columna-precio">
+      <div class="galeria-cotizacion">
+        <a href="images/COTIZACIÓN_ABRIL(1).jpg" target="_blank" title="Ver en pantalla completa">
+          <img src="images/COTIZACIÓN_ABRIL(1).jpg" alt="Cotización - Página 1 (Contacto y vigencia)" class="img-cotizacion">
+        </a>
+        <a href="images/COTIZACIÓN_ABRIL(2).jpg" target="_blank" title="Ver en pantalla completa">
+          <img src="images/COTIZACIÓN_ABRIL(2).jpg" alt="Cotización - Página 2 (Lista de precios)" class="img-cotizacion">
+        </a>
+        <a href="images/COTIZACIÓN_ABRIL(3).jpg" target="_blank" title="Ver en pantalla completa">
+          <img src="images/COTIZACIÓN_ABRIL(3).jpg" alt="Cotización - Página 3 (Lista de precios continuación)" class="img-cotizacion">
+        </a>
       </div>
-    </section>
-  </main>
+      <p class="nota-cotizacion">💡 Haz clic en cualquier imagen para verla en pantalla completa y hacer zoom.</p>
+    </div>
 
-  <footer>
-    <p>&copy; 2026 Grupo Erne - Frutería y Abarrotes Raquel. Todos los derechos reservados.</p>
-  </footer>
+    <!-- Columna derecha: Tu código QR -->
+    <div class="columna-qr">
+      <div class="tarjeta-qr">
+        <img src="images/COTIZACIONES-QR.png" alt="Código QR para descargar cotización" class="img-qr">
+        <p class="texto-qr"><strong>¡Escanea y llévatelo!</strong><br>Accede de inmediato a la lista desde tu celular.</p>
+      </div>
+    </div>
+  </div>
 
-  <script>
-    // Verificar si las imágenes cargaron correctamente
-    document.querySelectorAll('img').forEach(img => {
-      img.onerror = function() {
-        console.log('Error cargando:', this.src);
-        this.alt = '⚠️ Imagen no encontrada: ' + this.src.split('/').pop();
-      };
-    });
-  </script>
-</body>
-</html>
+  <div class="contenedor-descarga-btn">
+    <a href="images/COTIZACIÓN_ABRIL(1).jpg" download="Lista_Precios_Grupo_Erne_1.jpg" class="btn-descargar">
+      📥 Descargar Página 1
+    </a>
+    <a href="images/COTIZACIÓN_ABRIL(2).jpg" download="Lista_Precios_Grupo_Erne_2.jpg" class="btn-descargar">
+      📥 Descargar Página 2
+    </a>
+    <a href="images/COTIZACIÓN_ABRIL(3).jpg" download="Lista_Precios_Grupo_Erne_3.jpg" class="btn-descargar">
+      📥 Descargar Página 3
+    </a>
+  </div>
+</div>
